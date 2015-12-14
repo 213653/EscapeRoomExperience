@@ -4,50 +4,32 @@
 <script src="scripts/processing.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
 
-PImage introVariable;
-PImage iwanttoplayVariable;
-PImage startVariable;
-
-
+PImage a;
 void setup()
 {
 
 	size(2000,1000);
 	frameRate( 30 );
 	
-	introVariable = loadImage("images/intro.gif");
-	iwanttoplayVariable = loadImage("images/iwanttoplay.png");
-	startVariable= loadImage("images/start.png");
+	a = loadImage("images/introtext.png")
 
 }
 
 
 void draw()
 {
-	background(0,0,0);
+	background(255,50,50);
 	
-	image(introVariable,0,0,900,500);
-
+	image(a,0,0,600,600);
 	
-	fill(255,255,255);
-	text(mouseX,20,20);
-	text(mouseY,20,40);
-
-
 	if(mousePressed == true && mouseButton == LEFT)
 	{
-		if (mouseX > 677 && mouseX < 900 &&
-			mouseY > 475 && mouseY < 500)
-			{
-				link("indexa.html")
-			}
-			
+		link("i.html")
 	}
 	
-	
 
-	image(iwanttoplayVariable,300,400,300,150);
-	image(startVariable,677,475,223,25);
+	
+	
 
 
 }
